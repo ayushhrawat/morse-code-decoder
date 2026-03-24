@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-dark: #1a1a18;
+  --panel-1: #222220;
+  --panel-2: #2a2a27;
+  --border: #3a3a36;
+  --amber-primary: #EF9F27;
+  --amber-light: #FAC775;
+  --amber-dark: #633806;
+  --green-output: #1D9E75;
+  --muted: #888780;
+}
+
+* {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--amber-primary);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--panel-1);
+  border: 1px solid var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--amber-primary);
+  border: 1px solid var(--amber-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--amber-light);
+}
+
+::selection {
+  background: var(--amber-dark);
+  color: var(--amber-light);
+}
+
+@keyframes blink {
+  0%, 100% { 
+    opacity: 0.3;
+  }
+  50% { 
+    opacity: 1;
+  }
+}
+
+.blink-dot {
+  animation: blink 1.4s ease-in-out infinite;
+}
+
+.blink-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.blink-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.blink-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.text-amber {
+  color: var(--amber-primary);
+}
+
+.text-green {
+  color: var(--green-output);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.bg-panel-1 {
+  background-color: var(--panel-1);
+}
+
+.bg-panel-2 {
+  background-color: var(--panel-2);
+}
+
+.border-military {
+  border: 1px solid var(--border);
+}
+
+.border-amber {
+  border: 1px solid var(--amber-primary);
+}
